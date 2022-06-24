@@ -1,0 +1,33 @@
+#include<conio.h>
+#include<stdio.h>
+char nom[20];
+int pre_bol, boletos, sub_total;
+float des, total;
+
+main()
+{
+  printf(" Entradas Al Circo Rolex \n\n");
+
+  fflush(stdin);
+  printf(" Nombre del cliente: "); gets(nom);
+  printf("\n Precio del boleto: "); scanf("%d", &pre_bol);
+  printf("\n Cuantos boletos quiere comprar: "); scanf("%d", &boletos);
+
+  sub_total = pre_bol * boletos;
+
+  if (sub_total >= 10)
+  {
+    des = sub_total * .30;
+  }
+  else
+  {
+   des = 0;
+  }
+  total = sub_total - des;
+  printf("\n Subtotal: %d", sub_total);
+  printf("\n\n Descuento: %.2f", des);
+  printf("\n\n Total a pagar: %.2f", total);
+
+  printf("\n\n\n Autor: IRVIN ADRIAN");
+  getch();
+}
